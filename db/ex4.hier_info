@@ -1,0 +1,33 @@
+|wrapper_ex4
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDG0 <= ex4:dut.f
+
+
+|wrapper_ex4|ex4:dut
+x => x.IN1
+y => y.IN1
+z => z.IN1
+f <= IC_MUX_74LS151:dut.Y
+
+
+|wrapper_ex4|ex4:dut|IC_MUX_74LS151:dut
+E => ~NO_FANOUT~
+S0 => Mux0.IN8
+S1 => Mux0.IN9
+S2 => Mux0.IN10
+D0 => Mux0.IN0
+D1 => Mux0.IN1
+D2 => Mux0.IN2
+D3 => Mux0.IN3
+D4 => Mux0.IN4
+D5 => Mux0.IN5
+D6 => Mux0.IN6
+D7 => Mux0.IN7
+Y <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
